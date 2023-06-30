@@ -1,4 +1,4 @@
-/*
+ /*
 S — Single responsibility principle 
     Principio de responsabilidad única
  */
@@ -12,12 +12,14 @@ import java.util.ArrayList;
  * @author reroes
  */
 public class Persona {
-    private String nombre;
+     private String nombre;
     private int edad;
+    private Ciudad ciudad;
     
-    public Persona(String n, int e){
+    public Persona(String n, int e, Ciudad c){
         nombre = n;
         edad = e;
+        ciudad = c;
     }
     
     public void establecerNombre(String n){
@@ -28,6 +30,10 @@ public class Persona {
         edad = n;
     }
     
+    public void establecerCiudad(Ciudad n){
+        ciudad = n;
+    }
+    
     public String obtenerNombre(){
         return nombre;
     }
@@ -36,5 +42,7 @@ public class Persona {
         return edad;
     }
     
-    
+    public Ciudad obtenerCiudad(){
+        return ciudad;
+    }
 }
